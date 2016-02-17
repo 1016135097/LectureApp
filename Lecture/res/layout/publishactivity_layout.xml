@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffefebe7" >
+   <!-- 发布首页 -->
+<LinearLayout 
+    android:id="@+id/publishlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="#ffefebe7">
+    <!-- 顶部栏 -->
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#d5d5d5">
+    	<ImageButton
+        	android:id="@+id/publish_back"
+        	style="?android:attr/borderlessButtonStyle"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/ic_back" />
+    	<Button
+        	android:id="@+id/button2"
+        	style="?android:attr/borderlessButtonStyle"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="2"
+        	android:text="发布" />
+    	<ImageButton
+        	android:id="@+id/publish_more"
+        	style="?android:attr/borderlessButtonStyle"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+       	 	android:src="@drawable/ic_more" />                   
+     </LinearLayout>
+     <RelativeLayout
+         android:id="@+id/publish_linearLayout1"
+         android:layout_width="fill_parent"
+         android:layout_height="match_parent"
+         android:orientation="horizontal"
+         android:background="#ffffff" >
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TableRow>
+            <EditText 
+                android:id="@+id/addTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="标题"
+                android:maxLines="1"
+                />
+            <EditText 
+                android:id="@+id/addLectureCont"
+                android:layout_below="@+id/addTitle"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="top"
+                android:hint="讲座详细描述"
+                android:maxLines="10"
+                />
+        </RelativeLayout>
+      <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+            android:background="#ffffff">
+<!-- 其他信息 -->
+           <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="1.0dip"
+                android:shrinkColumns="0"
+                android:stretchColumns="1"
+                android:orientation="vertical" >
+
+                    
+                      
+
+
+<!--  讲座时间 -->                     
+                
+                <TableRow
+                    
+                    android:layout_width="fill_parent"
+                    android:background="#ffffff"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="5.0dip"
+                        android:text="讲座时间"
+                        android:textColor="#ff333333"
+                        android:textSize="16.0sp" 
+                        android:layout_span="1"
+                        />
+
+                    <EditText
+                        android:id="@+id/addLectureTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_span="3" />    
+                </TableRow>
+<!--  讲座地点 -->               
+                 <TableRow
+                    
+                    android:layout_width="fill_parent"
+                    android:background="#ffffff"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="5.0dip"
+                        android:text="讲座地点"
+                        android:textColor="#ff333333"
+                        android:textSize="16.0sp" 
+                        android:layout_span="1"
+                        />
+
+                    <EditText
+                        android:id="@+id/addLecturePlace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_span="3" />    
+                </TableRow>
+ <!-- 其他补充说明 -->               
+                 <TableRow
+                    
+                    android:layout_width="fill_parent"
+                    android:background="#ffffff"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="5.0dip"
+                        android:text="其他补充说明"
+                        android:textColor="#ff333333"
+                        android:textSize="16.0sp" 
+                        android:layout_span="1"
+                        />
+
+                    <EditText
+                        android:id="@+id/addOthers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_span="3" />    
+                </TableRow>
+                
+            </TableLayout>
+        </LinearLayout>
+     
+     
+     
+   
+<!--  底部栏  -->  
+</LinearLayout>
+	<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:background="#ffffff"
+    >
+	<Button
+    android:id="@+id/ensurePublish"
+    android:background="#61c0e7"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:text="确定发布" 
+    android:textColor="#ffffff"/>
+	</LinearLayout>
+
+</RelativeLayout>
